@@ -5,6 +5,7 @@ import javax.xml.ws.Endpoint;
 import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.Logger;
+import sud.webservices.ProductsManagerImpl;
 
 public class ServicePublisher {
 

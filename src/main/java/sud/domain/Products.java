@@ -5,9 +5,10 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.sun.xml.txw2.annotation.XmlElement;
+
 
 @XmlRootElement(name = "products")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -17,7 +18,7 @@ public class Products {
 	private List<Product> products;
 	
 	public Products() {
-		products = new ArrayList<Product>();
+		super();
 	}
 	
 	public Products(List<Product> products) {
@@ -26,6 +27,7 @@ public class Products {
 	
 	public long add(Product product) {
 		products.add(product);
+		return products.size();
 	}
 	
 	public Product get(long id) {
@@ -50,6 +52,7 @@ public class Products {
 	
 	public boolean removeAll() {
 		products = new ArrayList<Product>();
+		return true;
 	}
 	
 
