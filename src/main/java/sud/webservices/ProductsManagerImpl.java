@@ -14,8 +14,7 @@ public class ProductsManagerImpl implements ProductsManager {
 	private static Products products = new Products(new ArrayList<Product>());
 
 	public long addProduct(Product product) {
-
-		return 0;
+		return products.add(product);
 	}
 
 	public Product getProduct(long id) throws NoSuchProductException {
@@ -29,28 +28,31 @@ public class ProductsManagerImpl implements ProductsManager {
 	}
 
 	public double getProductPrice(long id) throws NoSuchProductException {
-
-		return 0;
+		Product product = products.get(id);
+		if(product != null) {
+			return product.getPrice();
+		} else {
+			throw new NoSuchProductException("No such product");
+		}
 	}
 
 	public Products getProducts() {
-
-		return null;
+		return products;
 	}
 
 	public Product updateProduct(Product product) {
-
+		
 		return null;
 	}
 
 	public boolean deleteProduct(long id) {
 
-		return false;
+		return products.remove(id);
 	}
 
 	public boolean deleteAllProducts() {
 
-		return false;
+		return products.removeAll();
 	}
 	
 }

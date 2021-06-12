@@ -13,7 +13,7 @@ public class ServicePublisher {
 	public static void main(String[] args) {
 		
 		logger.info("Starting service");
-		Endpoint.publish("http://localhost:2020/webservices/PoductsMAnager", new ProductsManagerImpl());
+		Endpoint.publish("http://localhost:2021/webservices/PoductsMAnager", new ProductsManagerImpl());
 		logger.info("Server started");
 	}
 }

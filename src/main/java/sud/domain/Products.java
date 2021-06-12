@@ -51,8 +51,7 @@ public class Products {
 	}
 	
 	public boolean removeAll() {
-		products = new ArrayList<Product>();
-		return true;
+		return products.removeAll(products);
 	}
 	
 
